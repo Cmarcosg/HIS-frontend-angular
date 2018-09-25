@@ -1,0 +1,6 @@
+<button (click)="logout()">salir</button>
+<button routerLink="/patients" *ngIf=" Logged === 'admin' ||  Logged === 'doctor' ">lista pacientes</button>
+<button routerLink="/patient/{{uid}}" *ngIf=" Logged === 'admin'||  Logged === 'doctor' ||  Logged === 'patient'">Ficha</button> 
+<button routerLink="/historys" *ngIf=" Logged === 'admin'  ||  Logged === 'doctor' ">historiales</button>
+<button routerLink="/history/{{uid}}" *ngIf=" Logged === 'admin' ||  Logged === 'doctor' ||  Logged === 'patient' ">detalles historial</button> 
+<button routerLink="/createuser" *ngIf=" Logged === 'technical' || Logged === 'admin'">crear usuario</button>

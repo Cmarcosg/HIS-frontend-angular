@@ -1,0 +1,4 @@
+<input type="text" placeholder="usuario" [(ngModel)]="user">
+<p><input type="password" placeholder="contraseña" [(ngModel)]="pass"></p>
+<button (click)="acceder()">entrar</button>
+<div *ngIf="error">{{error}}</div>
